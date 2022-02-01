@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../environments/environment';
 import { Account, AccountService } from './account.service';
 
 enum AuthenticationButtonName {
@@ -16,6 +17,7 @@ export class AppComponent {
   public account: Account;
 
   constructor(private accountService: AccountService) {
+    console.log('environment apiURL: ', environment.apiURL);
   }
 
   public onAuthenticationButtonClick(): void {
